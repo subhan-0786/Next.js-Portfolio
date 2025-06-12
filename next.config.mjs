@@ -3,6 +3,7 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  // Add any other existing configuration here
 }
 
-module.exports = nextConfig
+export default nextConfig
