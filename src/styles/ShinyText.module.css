@@ -1,0 +1,27 @@
+.shinyText {
+  color: rgba(255, 255, 255, 0.9); /* Match HeroSection description color */
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  animation: shine 0.3s linear infinite;
+}
+
+@keyframes shineText {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shinyText.disabled {
+  animation: none;
+}

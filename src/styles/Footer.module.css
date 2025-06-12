@@ -1,0 +1,96 @@
+.footer {
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: var(--bodyFont);
+    position: relative;
+    overflow: hidden;
+    /* Add this line to prevent overscroll */
+    overscroll-behavior: none;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+}
+
+.footerContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.footerSocial {
+  text-align: center;
+}
+
+.footerSocial h4 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: var(--titleFont);
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.socialIcons a {
+  color: #ffffff;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialIcons a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.footerBottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footerSocial h4 {
+    font-size: 1.5rem;
+  }
+
+  .socialIcons {
+    gap: 20px;
+  }
+
+  .socialIcons a {
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+  }
+}

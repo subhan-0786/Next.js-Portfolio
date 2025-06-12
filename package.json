@@ -9,13 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "firebase": "^11.9.1",
+    "framer-motion": "^12.16.0",
+    "next": "15.3.3",
+    "ogl": "^1.0.11",
+    "p5": "^2.0.3",
+    "particles.js": "^2.0.0",
     "react": "^19.0.0",
+    "react-circular-progressbar": "^2.2.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.3"
+    "react-icons": "^5.5.0",
+    "react-ogl": "^0.15.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
     "eslint": "^9",
-    "eslint-config-next": "15.3.3",
-    "@eslint/eslintrc": "^3"
+    "eslint-config-next": "15.3.3"
   }
 }

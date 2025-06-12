@@ -1,42 +1,59 @@
+/* Import Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+@font-face {
+  font-family: 'Acorn';
+  src: url('/fonts/Acorn-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Define CSS Variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --titleFont: "Acorn", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --bodyFont: "gt", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --ampFont: Baskerville, "Goudy Old Style", Palatino, "Book Antiqua", serif;
+  --systemFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --monoFont: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", monospace;
+  --background-color: 18, 18, 18;  /* #121212 in RGB */
+  --text-color: 255, 255, 255;     /* #FFFFFF in RGB */
+  --accent-color: 255, 215, 0;     /* #FFD700 in RGB */
+  --secondary-accent: 74, 144, 226; /* #4A90E2 in RGB */
+  --primary-color: #1a2a6c;
+  --secondary-color: #b21f1f;
+  --accent-color: #fdbb2d;
+  --text-color: #ffffff;
+  --background-color: #0f0f0f;
+  --card-background: rgba(255, 255, 255, 0.1);
+  --card-hover-background: rgba(255, 255, 255, 0.2);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  /* Optional: Enable scroll-snap for full-section scrolling */
+  scroll-snap-type: y mandatory;
+  overscroll-behavior: none;
+  overscroll-behavior-y: none;
+  height: 100%;
+  overflow-y: scroll;
 }
 
-html,
 body {
-  max-width: 100vw;
+  color: rgb(var(--text-color));
+  background-color: rgb(var(--background-color));
+  font-family: 'Poppins', var(--bodyFont);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overscroll-behavior: none;
+  overscroll-behavior-y: none;
+  position: relative;
   overflow-x: hidden;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* Ensure main sections snap into view */
+main > div {
+  min-height: 100vh;
+  scroll-snap-align: start;
 }

@@ -1,0 +1,107 @@
+.contact {
+  padding: 100px 50px;
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  text-align: center;
+  color: #ffffff;
+  font-family: var(--bodyFont);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.contact::after {
+  content: '';
+  position: absolute;
+  bottom: -100vh; /* Extend background below viewport */
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: linear-gradient(to right, #2c3e50, #4ca1af); /* Match section background */
+  z-index: -1; /* Behind content */
+}
+
+.contact h2 {
+  font-size: 4.5rem;
+  margin-bottom: 50px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-family: var(--titleFont);
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.contactForm input, .contactForm textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.contactForm input::placeholder, .contactForm textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contactForm input:focus, .contactForm textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.contactForm textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contactForm button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+  color: #333;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  align-self: center;
+}
+
+.contactForm button:hover {
+  background: linear-gradient(135deg, #8fd3f4 0%, #84fab0 100%);
+  box-shadow: 0 5px 15px rgba(132, 250, 176, 0.4);
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 50px 20px;
+  }
+
+  .contact h2 {
+    font-size: 3.5rem;
+  }
+
+  .contactForm {
+    padding: 30px;
+  }
+}

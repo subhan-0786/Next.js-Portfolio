@@ -1,0 +1,151 @@
+.experience {
+    padding: 100px 5%;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.sectionTitle {
+    font-family: var(--titleFont);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.experienceContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.experienceCard {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.experienceCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.cardHeader h3 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffd700;
+    font-family: 'Playfair Display', serif;
+}
+
+.position {
+    font-size: 1.4rem;
+    color: #e4c3c3;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.position svg {
+    margin-right: 20px;
+}
+
+.cardBody {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.duration, .location {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.duration svg, .location svg {
+    margin-right: 25px;
+    color: #ffd700;
+}
+
+.achievements {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.achievements li {
+    margin-bottom: 15px;
+    padding-left: 42px;
+    position: relative;
+}
+
+.achievements li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #ffd700;
+    font-size: 1.5rem;
+}
+
+.testimonial {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+    font-style: italic;
+    position: relative;
+}
+
+.testimonial::before {
+    content: '"';
+    font-size: 4rem;
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    color: #ffd700;
+    opacity: 0.5;
+}
+
+.demoVideo {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 768px) {
+    .experienceContainer {
+        gap: 30px;
+    }
+    .experienceCard {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sectionTitle {
+        font-size: 1.8rem;
+    }
+    .cardHeader h3 {
+        font-size: 1.4rem;
+    }
+}

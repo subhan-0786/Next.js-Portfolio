@@ -1,0 +1,92 @@
+.projects {
+  padding: 100px 50px;
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  text-align: center;
+  color: #ffffff;
+  font-family: var(--bodyFont);
+  min-height: 100vh; /* Added for full-screen scrolling */
+}
+
+.projects h2 {
+  font-size: 4.5rem;
+  margin-bottom: 50px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-family: var(--titleFont);
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projectItem {
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+  cursor: pointer;
+}
+
+.projectItem h3 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 600;
+  font-family: var(--titleFont);
+}
+
+.projectItem p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  flex-grow: 1;
+}
+
+.techStack {
+  margin-top: 20px;
+}
+
+.techItem {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 1rem;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 50px 20px;
+  }
+
+  .projects h2 {
+    font-size: 3.5rem;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .projectItem h3 {
+    font-size: 2rem;
+  }
+
+  .projectItem p {
+    font-size: 1.1rem;
+  }
+}
